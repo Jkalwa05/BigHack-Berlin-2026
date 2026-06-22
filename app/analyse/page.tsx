@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import BrandMark from "@/components/BrandMark";
 import { STORAGE_KEY } from "@/lib/paidMedia";
+
 type StepState = "pending" | "active" | "done";
 
 const NODES = [
@@ -80,7 +81,7 @@ export default function AnalysePage() {
         if (prev < stepsForCurrent.length - 1) {
           return prev + 1;
         }
-        // Step für diesen Knoten fertig
+        // Current node finished — advance to the next
         setDoneNodes((d) => (d.includes(activeNode) ? d : [...d, activeNode]));
         if (activeNode < NODES.length - 1) {
           setActiveNode((n) => n + 1);
