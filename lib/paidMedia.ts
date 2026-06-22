@@ -13,7 +13,7 @@ export type Figures = {
 export const STORAGE_KEY = "peec.paidmedia.state.v1";
 export const CONTEXT_KEY = "peec.offer.context.v1";
 export const ANALYSIS_FLAG = "peec.hasAnalysis";
-export const NOTIFY_EMAIL = "kalwajonas@gmail.com";
+export const NOTIFY_EMAIL = process.env.NEXT_PUBLIC_NOTIFY_EMAIL ?? "";
 
 export type OfferContext = {
   visitToLead?: number;

@@ -45,3 +45,6 @@ next-env.d.ts
 
 # claude project metadata
 .claude
+berlin2/
+berlin 2 1.0/
+tsconfig.tsbuildinfo
